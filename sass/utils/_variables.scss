@@ -1,0 +1,31 @@
+:root {
+  --acctnt-color: #2196f3;
+  --logo-studio-header-color: #000000;
+  --title-black-color: #212121;
+  --contacts-features-text-color: #757575;
+  --hero-studio-footer-text-color: #ffffff;
+  --hero-bcg-color-footer: #2f303a;
+  --hero-button-active: #188ce8;
+  --features-bcg-color: #f5f5f5;
+  --team-bcg-color: #f5f4fa;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --border: #eeeeee;
+  --soc-color: #afb1b8;
+  --bcg-soc-footer: rgba(255, 255, 255, 0.1);
+  --bcg-overflow: rgba(33, 150, 243, 0.9);
+  --backdrop: rgba(0, 0, 0, 0.2);
+  --modal-border: rgba(0, 0, 0, 0.1);
+  --work-bcg-text: rgba(47, 48, 58, 0.8);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-modal-input: rgba(33, 33, 33, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+  --border-input-footer: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--hero-studio-footer-text-color);
+  color: var(--title-black-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
