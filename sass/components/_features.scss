@@ -1,5 +1,6 @@
 .features__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -7,7 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 100%;
+  // width: 270px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -16,6 +18,7 @@
 
 .features__title {
   margin-bottom: 10px;
+  text-align: center;
 
   font-size: 14px;
   font-weight: 700;
