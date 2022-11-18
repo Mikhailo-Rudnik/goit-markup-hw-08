@@ -4,6 +4,15 @@
   gap: 30px;
 }
 
+.features__item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
+  }
+}
+
 .features__wrap {
   display: flex;
   align-items: center;
