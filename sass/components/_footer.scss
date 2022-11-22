@@ -7,7 +7,16 @@
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 0;
+    align-items: baseline;
+  }
 }
 
 .footer__logo-link {
@@ -25,7 +34,7 @@
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .address__google-link {
@@ -53,8 +62,13 @@
 }
 
 .footer__subscribe {
-  margin-left: 70px;
-  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-right: auto;
+  }
 }
 
 .subscribe__title {
@@ -63,6 +77,7 @@
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .subscribe__soc-list {
@@ -97,14 +112,17 @@
 }
 
 .subscribe__form {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  // margin-right: 12px;
 
   border: 1px solid var(--border-input-footer);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -120,6 +138,7 @@
 .subscribe__button {
   display: flex;
   padding: 10px 32px;
+  margin: 0 auto;
 
   background-color: var(--acctnt-color);
   color: var(--hero-studio-footer-text-color);

@@ -1,14 +1,17 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
 
   background-color: var(--hero-bcg-color-footer);
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-bcg-color-footer);
@@ -17,24 +20,45 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+
+.hero__container {
+  max-width: 100%;
+  height: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
 }
 
 .hero__title {
-  width: 696px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
 
   color: var(--hero-studio-footer-text-color);
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
-  padding: 10px 32px;
+  padding: 10px 24px;
   margin: 0 auto;
 
   background-color: var(--acctnt-color);
@@ -48,5 +72,9 @@
   &:hover,
   &:focus {
     background-color: var(--hero-button-active);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
   }
 }
