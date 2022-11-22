@@ -20,6 +20,7 @@
   --border-modal-input: rgba(33, 33, 33, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
   --border-input-footer: rgba(255, 255, 255, 0.3);
+  --gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 body {
@@ -229,8 +230,6 @@ button {
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-bcg-color-footer);
@@ -239,15 +238,38 @@ button {
   background-position: center;
   background-size: cover;
 }
-
-.hero__container {
-  max-width: 100%;
-  height: 400px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  outline: 2px solid red;
+@media screen and (min-width: 480px) {
+  .overlay {
+    max-width: 480px;
+    background-image: var(--gradient), url("../images/hero/hero-mobile-320.jpg");
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url("../images/hero/hero-mobile-640.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    max-width: 768px;
+    background-image: var(--gradient), url("../images/hero/hero-tablet-320.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url("../images/hero/hero-tablet-640.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1200px;
+    background-image: var(--gradient), url("../images/hero/hero-desktop-320.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: var(--gradient), url("../images/hero/hero-desktop-640.jpg");
+  }
 }
 
 .hero__title {
