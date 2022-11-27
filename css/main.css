@@ -45,7 +45,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 button {
@@ -138,22 +137,27 @@ button {
 .header__container {
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 10px 10px 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 3px solid tomato;
 }
 
 .logo-link__web {
   color: var(--acctnt-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .logo-link__studio {
   color: var(--logo-studio-header-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .header__navigation {
@@ -161,7 +165,7 @@ button {
 }
 
 .navigation__menu {
-  display: flex;
+  display: none;
   gap: 50px;
 }
 
@@ -191,7 +195,7 @@ button {
 }
 
 .header__contacts {
-  display: flex;
+  display: none;
   margin-left: auto;
 }
 .header__contacts .contacts__item:not(:last-child) {
@@ -218,6 +222,87 @@ button {
   fill: currentColor;
 }
 
+.menu-open {
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 15px 48px 40px;
+}
+
+.mob-menu__container {
+  position: absolute;
+}
+
+.menu-close {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.mob-menu-list {
+  margin-bottom: 100px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--title-black-color);
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts-tel__link {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--acctnt-color);
+}
+
+.mob-contacts-mail__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--contacts-features-text-color);
+}
+
+.mob-soc {
+  display: flex;
+  margin-top: 64px;
+}
+
+.mob-soc__item:not(:last-child) {
+  border-right: 1px solid var(--border-modal-input);
+}
+
+.mob-soc__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--acctnt-color);
+  padding: 10px;
+}
+
 .hero {
   padding: 118px 0;
   background-color: var(--hero-bcg-color-footer);
@@ -230,21 +315,17 @@ button {
 }
 
 .overlay {
+  max-width: 1600px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-bcg-color-footer);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: var(--gradient), url("../images/hero/hero-mobile-320.jpg");
 }
-@media screen and (min-width: 480px) {
-  .overlay {
-    max-width: 480px;
-    background-image: var(--gradient), url("../images/hero/hero-mobile-320.jpg");
-  }
-}
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
     background-image: var(--gradient), url("../images/hero/hero-mobile-640.jpg");
   }
@@ -357,6 +438,11 @@ button {
 .work {
   padding-top: 0;
 }
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
 
 .work__list {
   display: flex;
@@ -394,6 +480,7 @@ button {
 
 .team__card {
   width: 100%;
+  height: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--hero-studio-footer-text-color);
@@ -506,18 +593,7 @@ button {
 }
 
 .footer__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .footer__container {
-    gap: 0;
-    align-items: baseline;
-  }
 }
 
 .footer__logo-link {
@@ -557,6 +633,9 @@ button {
   color: var(--acctnt-color);
 }
 
+.footer__subscribe {
+  margin-top: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer__subscribe {
     margin-left: 165px;
@@ -615,7 +694,7 @@ button {
 }
 
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   margin-bottom: 20px;
