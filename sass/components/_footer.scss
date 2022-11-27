@@ -8,17 +8,32 @@
 .footer__container {
   text-align: center;
 
-  // display: flex;
-  // flex-wrap: wrap;
-  // gap: 60px;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    text-align: start;
+  }
+}
 
-  // @media screen and (min-width: 768px) {
-  //   gap: 0;
-  //   align-items: baseline;
-  // }
+.footer__wrap-tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 70px;
+    margin-right: auto;
+  }
+}
+
+.footer-address-wrap {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
 }
 
 .footer__logo-link {
@@ -31,8 +46,13 @@
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .address__item:not(:last-child) {
@@ -64,13 +84,8 @@
 }
 
 .footer__subscribe {
-  margin-top: 60px;
-  @media screen and (min-width: 768px) {
-    margin-left: 165px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-left: 70px;
-    margin-right: auto;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
   }
 }
 
@@ -81,6 +96,10 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .subscribe__soc-list {
@@ -114,6 +133,12 @@
   fill: currentColor;
 }
 
+.footer__subscribe-newsletter {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+}
+
 .subscribe__form {
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -124,8 +149,6 @@
   width: 100%;
   height: 50px;
   padding: 15px 16px;
-  margin-bottom: 20px;
-  // margin-right: 12px;
 
   border: 1px solid var(--border-input-footer);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -136,11 +159,22 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--footer-contacts-color);
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe__button {
   display: flex;
-  padding: 10px 32px;
+  padding: 10px 28px 10px 31px;
   margin: 0 auto;
 
   background-color: var(--acctnt-color);
