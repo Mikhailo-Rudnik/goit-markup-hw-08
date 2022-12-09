@@ -31,7 +31,8 @@
     }
   }
   @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+    max-width: 1600px;
+    height: 600px;
     background-image: var(--gradient), url('../images/hero/hero-desktop-320.jpg');
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: var(--gradient), url('../images/hero/hero-desktop-640.jpg');
